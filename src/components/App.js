@@ -26,9 +26,8 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        Procure:
-        <Search callback={this.handleSearch}/>
-          Posts:
+        <p>Procure:<Search callback={this.handleSearch}/></p>
+        <p>Posts:</p>
         <ul>
           {
             this.props.posts.map(
