@@ -2,7 +2,7 @@ const promiseMiddleware = (store) => (next) => (action) => {
   if (isPromise(action.payload)) {
     action.payload.then(
         (res) => {
-          action.payload = res;
+          action.payload = res.body;
           store.dispatch(action);
         },
         (error) => {

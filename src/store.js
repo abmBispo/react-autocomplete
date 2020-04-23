@@ -8,7 +8,6 @@ const defaultState = {
 const reducer = function(state = defaultState, action) {
   switch (action.type) {
     case 'SEARCH_POSTS_BY_QUERY':
-      console.log(action.payload);
       return {...state, posts: action.payload};
   }
   return state;

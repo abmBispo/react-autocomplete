@@ -5,7 +5,11 @@ const superagent = superagentPromise(_superagent, global.Promise);
 
 const API_ROOT = 'http://localhost:3000';
 
-const responseBody = (res) => res.body;
+const responseBody = (res) => ({
+  body: res.body,
+  headers: res.headers,
+  status: res.status,
+});
 
 const requests = {
   get: (url) =>
